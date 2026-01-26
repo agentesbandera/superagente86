@@ -89,12 +89,15 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Ubuntu Sans', system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased font-sans;
   }
 
-  h1, h2, h3 {
-    font-family: 'Ubuntu', sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  input, button, textarea, select {
+    font-family: inherit;
   }
 }
 

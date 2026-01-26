@@ -6,78 +6,80 @@
 
 @layer base {
   :root {
-    --background: 220 20% 97%;
-    --foreground: 220 25% 10%;
+    /* Brand Colors - Amarillo #FDED8A, Negro #25272A, Verde #22C55E, Blanco #FFFFFF */
+    --background: 0 0% 100%;
+    --foreground: 216 6% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card-foreground: 216 6% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
+    --popover-foreground: 216 6% 15%;
 
-    --primary: 220 90% 56%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 52 96% 77%;
+    --primary-foreground: 216 6% 15%;
 
-    --secondary: 220 15% 92%;
-    --secondary-foreground: 220 25% 20%;
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 52 40% 92%;
+    --muted-foreground: 216 6% 40%;
 
-    --accent: 220 90% 96%;
-    --accent-foreground: 220 90% 40%;
+    --accent: 52 96% 90%;
+    --accent-foreground: 216 6% 15%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 90% 56%;
+    --border: 216 6% 85%;
+    --input: 216 6% 85%;
+    --ring: 52 96% 77%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 56%) 0%, hsl(240 80% 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 97%) 0%, hsl(220 25% 94%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(220 25% 10% / 0.08);
-    --shadow-elevated: 0 12px 40px -8px hsl(220 25% 10% / 0.12);
-    --shadow-glow: 0 0 40px -10px hsl(220 90% 56% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(52 96% 77%) 0%, hsl(52 96% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(52 20% 97%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(216 6% 15% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(216 6% 15% / 0.12);
+    --shadow-glow: 0 0 40px -10px hsl(52 96% 77% / 0.5);
   }
 
   .dark {
-    --background: 220 25% 8%;
-    --foreground: 220 15% 95%;
+    /* Brand Colors Dark Mode - Negro #25272A as background */
+    --background: 216 6% 15%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 220 15% 95%;
+    --card: 216 6% 18%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 220 15% 95%;
+    --popover: 216 6% 18%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 220 90% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 52 96% 77%;
+    --primary-foreground: 216 6% 15%;
 
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 220 15% 90%;
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 20% 16%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 216 6% 25%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 220 40% 20%;
-    --accent-foreground: 220 90% 70%;
+    --accent: 52 50% 25%;
+    --accent-foreground: 52 96% 77%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 220 90% 60%;
+    --border: 216 6% 25%;
+    --input: 216 6% 25%;
+    --ring: 52 96% 77%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 60%) 0%, hsl(240 80% 65%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(220 25% 8%) 0%, hsl(220 25% 6%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(52 96% 77%) 0%, hsl(52 96% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(216 6% 15%) 0%, hsl(216 6% 12%) 100%);
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 40px -10px hsl(220 90% 60% / 0.4);
+    --shadow-glow: 0 0 40px -10px hsl(52 96% 77% / 0.4);
   }
 }
 
@@ -115,7 +117,7 @@
 
   .login-button-primary:hover {
     @apply opacity-90 scale-[1.02];
-    box-shadow: 0 0 50px -8px hsl(220 90% 56% / 0.4);
+    box-shadow: 0 0 50px -8px hsl(52 96% 77% / 0.5);
   }
 
   .login-button-secondary {

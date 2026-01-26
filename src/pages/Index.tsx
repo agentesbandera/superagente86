@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabase";
 import { LoginForm } from "@/components/auth/LoginForm";
 import { AuthBackground } from "@/components/auth/AuthBackground";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Shield } from "lucide-react";
 
 const Index = () => {
@@ -40,7 +41,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <AuthBackground />
-      
+      <ThemeToggle />
       <div className="w-full max-w-md">
         <div className="login-card glass-effect animate-float" style={{ animationDuration: '8s' }}>
           {/* Logo / Brand */}

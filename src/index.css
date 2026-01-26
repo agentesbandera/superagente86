@@ -103,12 +103,12 @@
 
 @layer components {
   .login-card {
-    @apply bg-card rounded-2xl p-8 md:p-10;
+    @apply bg-card rounded-2xl p-8 md:p-10 font-sans;
     box-shadow: var(--shadow-elevated);
   }
 
   .login-button {
-    @apply w-full py-3.5 px-6 rounded-xl font-medium transition-all duration-300;
+    @apply w-full py-3.5 px-6 rounded-xl font-medium transition-all duration-300 font-sans;
     @apply flex items-center justify-center gap-3;
   }
 
@@ -132,7 +132,7 @@
   }
 
   .input-elegant {
-    @apply w-full px-4 py-3.5 rounded-xl bg-secondary/50 border border-border;
+    @apply w-full px-4 py-3.5 rounded-xl bg-secondary/50 border border-border font-sans;
     @apply text-foreground placeholder:text-muted-foreground;
     @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
     @apply transition-all duration-200;

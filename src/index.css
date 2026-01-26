@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .input-elegant {
-    @apply w-full px-4 py-3.5 rounded-xl bg-secondary/50 border border-border font-sans;
+    @apply w-full px-4 py-3.5 rounded-xl bg-card border border-border font-sans;
     @apply text-foreground placeholder:text-muted-foreground;
     @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
     @apply transition-all duration-200;

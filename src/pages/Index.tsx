@@ -49,7 +49,7 @@ const Index = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4" style={{ background: 'var(--gradient-primary)' }}>
               <Shield className="w-8 h-8 text-primary-foreground" />
             </div>
-            <h1 className="text-3xl font-semibold text-foreground mb-2">
+            <h1 className="text-3xl font-semibold font-heading text-foreground mb-2">
               Bienvenido
             </h1>
             <p className="text-muted-foreground">

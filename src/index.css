@@ -8,28 +8,166 @@
   :root {
     /* Brand Colors - Amarillo #FDED8A, Negro #25272A, Verde #22C55E, Blanco #FFFFFF */
     --background: 52 96% 77%;
-    --foreground: 18 17% 12%; /* Negro */
+    --foreground: 216 6% 15%;
 
-    --card: 255 100% 100%; /* Blanco */
-    --card-foreground: 18 17% 12%; /* Negro */
+    --card: 0 0% 100%;
+    --card-foreground: 216 6% 15%;
 
-    --popover: 255 100% 100%; /* Blanco */
-    --popover-foreground: 18 17% 12%; /* Negro */
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 6% 15%;
 
-    --primary: 52 96% 77%; /* Amarillo */
-    --primary-foreground: 255 100% 100%; /* Blanco */
+    --primary: 52 96% 77%;
+    --primary-foreground: 216 6% 15%;
 
-    --secondary: 142 71% 45%; /* Verde */
-    --secondary-foreground: 255 100% 100%; /* Blanco */
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 52 100% 91%; /* Claro */
-    --muted-foreground: 18 17% 12%; /* Negro */
+    --muted: 52 40% 92%;
+    --muted-foreground: 216 6% 40%;
 
-    --border: 52 96% 77%;
-    --input: 52 80% 77%;
+    --accent: 52 96% 90%;
+    --accent-foreground: 216 6% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 6% 85%;
+    --input: 216 6% 85%;
     --ring: 52 96% 77%;
 
-    --accent: 52 96% 77%; /* Amarillo */
-    --accent-foreground: 18 17% 12%; /* Negro */
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(52 96% 77%) 0%, hsl(52 96% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(52 20% 97%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(216 6% 15% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(216 6% 15% / 0.12);
+    --shadow-glow: 0 0 40px -10px hsl(52 96% 77% / 0.5);
+  }
+
+  .dark {
+    /* Brand Colors Dark Mode - Negro #25272A as background */
+    --background: 216 6% 15%;
+    --foreground: 0 0% 95%;
+
+    --card: 216 6% 18%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 216 6% 18%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 52 96% 77%;
+    --primary-foreground: 216 6% 15%;
+
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 216 6% 25%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 52 50% 25%;
+    --accent-foreground: 52 96% 77%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 6% 25%;
+    --input: 216 6% 25%;
+    --ring: 52 96% 77%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(52 96% 77%) 0%, hsl(52 96% 65%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(216 6% 15%) 0%, hsl(216 6% 12%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px -10px hsl(52 96% 77% / 0.4);
+  }
+}
+
+/* Tipografía global */
+* {
+  font-family: 'Ubuntu Sans', system-ui, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .login-card {
+    @apply bg-card rounded-2xl p-8 md:p-10 font-sans;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .login-button {
+    @apply w-full py-3.5 px-6 rounded-xl font-medium transition-all duration-300 font-sans;
+    @apply flex items-center justify-center gap-3;
+  }
+
+  .login-button-primary {
+    @apply login-button text-primary-foreground;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .login-button-primary:hover {
+    @apply opacity-90 scale-[1.02];
+    box-shadow: 0 0 50px -8px hsl(52 96% 77% / 0.5);
+  }
+
+  .login-button-secondary {
+    @apply login-button bg-secondary text-secondary-foreground border border-border;
+  }
+
+  .login-button-secondary:hover {
+    @apply bg-muted;
+  }
+
+  .input-elegant {
+    @apply w-full px-4 py-3.5 rounded-xl bg-card border border-border font-sans;
+    @apply text-foreground placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary;
+    @apply transition-all duration-200;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-xl bg-card/80;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 }

@@ -7,29 +7,29 @@
 @layer base {
   :root {
     /* Brand Colors - Amarillo #FDED8A, Negro #25272A, Verde #22C55E, Blanco #FFFFFF */
-    --background: 52 96% 77%;
-    --foreground: 18 17% 12%; /* Negro */
+    --background: 52 97% 77%;
+    --foreground: 216 6% 15%; /* Negro */
 
-    --card: 255 100% 100%; /* Blanco */
-    --card-foreground: 18 17% 12%; /* Negro */
+    --card: 0 0% 100%; /* Blanco */
+    --card-foreground: 216 6% 15%; /* Negro */
 
-    --popover: 255 100% 100%; /* Blanco */
-    --popover-foreground: 18 17% 12%; /* Negro */
+    --popover: 0 0% 100%; /* Blanco */
+    --popover-foreground: 216 6% 15%; /* Negro */
 
-    --primary: 52 96% 77%; /* Amarillo */
-    --primary-foreground: 255 100% 100%; /* Blanco */
+    --primary: 52 97% 77%; /* Amarillo */
+    --primary-foreground: 216 6% 15%; /* Negro - better contrast */
 
     --secondary: 142 71% 45%; /* Verde */
-    --secondary-foreground: 255 100% 100%; /* Blanco */
+    --secondary-foreground: 216 6% 15%; /* Negro - better contrast */
 
     --muted: 52 100% 91%; /* Claro */
-    --muted-foreground: 18 17% 12%; /* Negro */
+    --muted-foreground: 216 6% 15%; /* Negro */
 
-    --border: 52 96% 77%;
+    --border: 52 97% 77%;
     --input: 52 80% 77%;
-    --ring: 52 96% 77%;
+    --ring: 52 97% 77%;
 
-    --accent: 52 96% 77%; /* Amarillo */
-    --accent-foreground: 18 17% 12%; /* Negro */
+    --accent: 52 97% 77%; /* Amarillo */
+    --accent-foreground: 216 6% 15%; /* Negro */
   }
 }
